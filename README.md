@@ -2,7 +2,7 @@
 
 This is a simple integration of a landing page for Equalizer (fictive product).
 
-You can preview the website [here](https://your-live-site-url.com)
+You can preview the website [here](https://equalizer-landingpage.netlify.app/)
 
 ### Built with
 
