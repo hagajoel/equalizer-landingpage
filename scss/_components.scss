@@ -1,0 +1,134 @@
+.logo {
+  background: transparent url(../assets/images/logo.svg) no-repeat center;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 147px;
+  height: 33px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  border: unset;
+  font-family: inherit;
+  font-weight: bolder;
+  font-size: 18px;
+  border-radius: 0.667em;
+  transition: all .3s ease-in-out;
+
+  &.is-primary {
+    background-color: $color-black;
+    color: $color-gray;
+
+    &:hover,
+    &:focus {
+      background-color: $color-cyan;
+    }
+  }
+
+  &.is-secondary {
+    background-color: $color-gray;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      background-color: $color-yellow;
+    }
+  }
+
+  svg {
+    margin-right: 0.5em;
+  }
+}
+
+.main-info {
+  background: $color-black url(../assets/images/bg-pattern-2.svg) no-repeat center top;
+  background-size: 82%;
+  color: $color-gray;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 13rem;
+  position: relative;
+
+  @media (max-width: $bp-mobile) {
+    margin-inline: -1.5rem;
+  }
+
+  @media (min-width: $bp-mobile) {
+    height: 37.5rem;
+    margin-top: 15rem;
+    background-size: 45%;
+  }
+
+  @media (min-width: $bp-tablet) {
+    margin-top: 20rem;
+    background-size: 25%;
+    background-position-x: 40%;
+  }
+
+  .inner {
+    background-color: $color-red;
+    border-radius: 0.75em;
+    padding: 3rem 2.25rem;
+    z-index: 2;
+    font-size: 18px;
+
+    @media (min-width: $bp-mobile) {
+      max-width: 25rem;
+      position: absolute;
+      right: 3.5rem;
+      top: 9.375rem;
+      padding: 3rem;
+    }
+
+    @media (min-width: $bp-tablet) {
+      max-width: 28.125rem;
+      padding: 3.375rem;
+      top: 8.625rem;
+      right: 5.938rem;
+
+      p {
+        line-height: 1.7;
+        font-size: 20px;
+      }
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      margin-block: 2.5rem;
+      line-height: 1;
+
+      strong {
+        font-size: 65px;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .screenshot {
+    margin: -8rem auto 4rem auto;
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+
+    @media (min-width: $bp-mobile) {
+      position: absolute;
+      left: 4rem;
+      top: -8.625rem;
+      margin: unset;
+    }
+
+    @media (min-width: $bp-tablet) {
+      left: 6.375rem;
+      top: -13.313rem;
+    }
+  }
+
+  .button:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
